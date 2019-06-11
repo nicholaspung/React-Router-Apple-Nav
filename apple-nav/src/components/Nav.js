@@ -1,11 +1,10 @@
 import React from 'react';
 import SubNav from './SubNav';
 
-const Nav = () => {
+const Nav = props => {
     return (
         <div>
-            <p>Nav</p>
-            <SubNav />
+            <p>{props.navItem.subnav.map(item => <SubNav subNav={item}/>)}</p>
         </div>
     );
 }
