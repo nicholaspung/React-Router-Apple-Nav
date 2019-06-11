@@ -39,7 +39,7 @@ const appleLinksData = [
         "new": []
     },
     {
-        "name": "watch",
+        "name": "tv",
         "subnav": [
             "Apple TV app", "Apple TV+", "Apple TV 4K", "Apple TV HD",
             "AirPlay", "Accessories"

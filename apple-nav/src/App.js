@@ -17,7 +17,7 @@ class App extends React.Component {
         <p>Apple Nav Container</p>
 
         <Route path="/" render={props => <NavWrapper appleNav={this.state.appleNav} {...props}/>}/>
-        {this.state.appleNav.map(tab => <Route path='/:name' render={props => <Nav navItem={tab} />}/>)}
+        {this.state.appleNav.map(tab => <Route key={tab.name} path={`/${tab.name}`} render={props => <Nav navItem={tab} />}/>)}
       </div>
     );
   }

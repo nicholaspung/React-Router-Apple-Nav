@@ -4,7 +4,7 @@ import SubNav from './SubNav';
 const Nav = props => {
     return (
         <div>
-            <p>{props.navItem.subnav.map(item => <SubNav subNav={item}/>)}</p>
+            {props.navItem.subnav.map(item => <SubNav subNav={item} key={item} />)}
         </div>
     );
 }

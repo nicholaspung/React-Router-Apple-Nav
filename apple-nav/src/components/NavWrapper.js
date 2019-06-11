@@ -1,13 +1,12 @@
 import React from 'react';
-import Nav from './Nav';
-import { Link, Route } from 'react-router-dom';
+import NavList from './NavList';
+import { Link } from 'react-router-dom';
 
 const NavWrapper = props => {
-    console.log(props)
     return (
         <div>
-            <p>NavWrapper</p>
-            {props.appleNav.map(item => <Link to={`${props.match.url}${item.name}`}><Nav navItem={item} /></Link>)}
+            <Link to="/">NavWrapper</Link>
+            {props.appleNav.map(item => <Link key={item.name} to={`${props.match.url}${item.name}`}><NavList navItem={item} key={item.name} /></Link>)}
         </div>
     );
 }
